@@ -6,6 +6,37 @@ Este proyecto es una aplicacion movil desarrollada en Flutter que implementa un 
 
 La aplicacion esta diseñada siguiendo una arquitectura limpia estructurada en capas, lo que permite separar la logica de negocio de la interfaz de usuario y facilitar el mantenimiento del codigo.
 
+```mermaid
+flowchart TD
+    subgraph Presentacion [Capa de Presentacion - UI]
+        CL[ContactListPage]
+        CF[ContactForm]
+    end
+
+    subgraph Logica [Capa de Servicios - Logica de Negocio]
+        CS[ContactService]
+        DB[DBHelper]
+    end
+
+    subgraph Modelos [Capa de Modelos - Datos]
+        M[Contact Model]
+    end
+
+    subgraph BD [Base de Datos Local]
+        SQL[(SQLite: contacts)]
+    end
+
+    %% Flujos e interacciones
+    CL -->|Navega / Pasa datos| CF
+    CL -->|Consulta datos / Cambia favorito| CS
+    CF -->|Guarda / Actualiza contacto| CS
+    
+    CS -->|Serializa / Deserializa| M
+    CS -->|Usa conexion de| DB
+    CS -->|Ejecuta operaciones CRUD| SQL
+    DB -->|Crea tablas / Ejecuta migraciones| SQL
+```
+
 ### Capa de Modelos (Models)
 * **contact.dart**: Define la clase de datos `Contact`. Se encarga de la representacion del modelo de dominio y contiene los metodos de serializacion (`toMap`) y deserializacion (`fromMap`) necesarios para interactuar con la base de datos SQLite.
 

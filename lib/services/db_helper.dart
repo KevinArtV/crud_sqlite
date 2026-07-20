@@ -1,9 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
 import 'package:path/path.dart';
-import '../models/user.dart';
 
 class DBHelper {
   static Database? _db;
@@ -27,15 +25,31 @@ class DBHelper {
     String path = join(await getDatabasesPath(), 'user_database.db');
     return await openDatabase(
       path,
-      version: 1,
+      version: 2,
       onCreate: (db, version) async {
         await db.execute('''
-          CREATE TABLE users(
+          CREATE TABLE contacts(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
-            email TEXT NOT NULL
+            phone TEXT NOT NULL,
+            email TEXT NOT NULL,
+            is_favorite INTEGER NOT NULL DEFAULT 0
           )
         ''');
+      },
+      onUpgrade: (db, oldVersion, newVersion) async {
+        if (oldVersion < 2) {
+          await db.execute('DROP TABLE IF EXISTS users');
+          await db.execute('''
+            CREATE TABLE contacts(
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              name TEXT NOT NULL,
+              phone TEXT NOT NULL,
+              email TEXT NOT NULL,
+              is_favorite INTEGER NOT NULL DEFAULT 0
+            )
+          ''');
+        }
       },
     );
   }
@@ -47,5 +61,4 @@ class DBHelper {
       _db = null;
     }
   }
-
 }

@@ -110,3 +110,28 @@ Para compilar y ejecutar este proyecto de manera local, asegurese de tener insta
    ```bash
    flutter run
    ```
+## Caputras de Pantalla
+<img width="534" height="1102" alt="image" src="https://github.com/user-attachments/assets/be0b0211-3ed2-4040-a30c-e9fe059b2981" />
+<img width="533" height="1101" alt="image" src="https://github.com/user-attachments/assets/765aad85-ac1f-4daa-985b-98816ea34ef0" />
+<img width="533" height="1098" alt="image" src="https://github.com/user-attachments/assets/92a95f2f-b381-4362-a82f-398811f68aff" />
+<img width="536" height="1101" alt="image" src="https://github.com/user-attachments/assets/6a67f746-1d4f-4c8a-a842-d1ec06d08512" />
+<img width="533" height="1099" alt="image" src="https://github.com/user-attachments/assets/b51303b4-49cb-4f2e-a0c8-a319556bfed3" />
+<img width="534" height="1099" alt="image" src="https://github.com/user-attachments/assets/012bbec3-0439-4ee3-9cae-b9d847865601" />
+<img width="533" height="1100" alt="image" src="https://github.com/user-attachments/assets/943c5bba-4a4a-41f3-851a-76b67c5bfdb8" />
+<img width="534" height="1103" alt="image" src="https://github.com/user-attachments/assets/3a6d640f-4426-4b72-9d45-01683d3668de" />
+<img width="534" height="1101" alt="image" src="https://github.com/user-attachments/assets/4a6c1e57-9a00-4a56-82f2-2d34a9195d21" />
+<img width="534" height="1101" alt="image" src="https://github.com/user-attachments/assets/5520d482-9c2c-40f8-9ec9-177b64003250" />
+<img width="532" height="1098" alt="image" src="https://github.com/user-attachments/assets/e0740288-92f8-49b9-8060-6c604ba8ba8c" />
+<img width="533" height="1101" alt="image" src="https://github.com/user-attachments/assets/fb34957d-53d5-4619-bdca-e0cf02a0cba7" />
+
+
+
+
+
+
+
+
+
+
+
+
